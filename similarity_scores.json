@@ -1,0 +1,20 @@
+[
+  {
+    "group": 1,
+    "sentence_a": "今天天气很好，适合去公园散步。",
+    "sentence_b": "阳光明媚的日子，很适合到公园走走。",
+    "cosine_similarity": 0.912571
+  },
+  {
+    "group": 2,
+    "sentence_a": "我想订一张明天去上海的机票。",
+    "sentence_b": "请帮我查询明日前往上海的航班。",
+    "cosine_similarity": 0.914576
+  },
+  {
+    "group": 3,
+    "sentence_a": "这家餐厅的意大利面非常好吃。",
+    "sentence_b": "量子计算机利用量子比特进行运算。",
+    "cosine_similarity": -0.025645
+  }
+]
