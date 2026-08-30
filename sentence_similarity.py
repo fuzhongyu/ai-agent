@@ -58,10 +58,10 @@ def main() -> None:
     results = []
 
     for index, (sentence_a, sentence_b) in enumerate(SENTENCE_PAIRS, start=1):
-        embeddings = model.encode([sentence_a, sentence_b], normalize_embeddings=True) # type: ignore
+        embeddings = model.encode([sentence_a, sentence_b], normalize_embeddings=True) 
         # 已归一化的向量，点积即余弦相似度，范围约为 [-1, 1]。
         score = float(embeddings[0] @ embeddings[1])
-        results.append( # type: ignore
+        results.append(
             {
                 "group": index,
                 "sentence_a": sentence_a,

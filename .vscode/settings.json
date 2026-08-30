@@ -1,4 +1,5 @@
 {
   // 使用系统 Homebrew 的 Python 3.12 作为项目解释器（不使用 .venv）
-  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12"
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12",
+  "python.analysis.typeCheckingMode": "off"
 }
