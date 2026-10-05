@@ -3,5 +3,15 @@
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12",
   "python.analysis.typeCheckingMode": "off",
   "python-envs.defaultEnvManager": "ms-python.python:conda",
-  "python-envs.defaultPackageManager": "ms-python.python:conda"
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+
+  // ===== 保存时自动格式化 =====
+  "editor.formatOnSave": true,
+
+  // ===== Python 使用 Black 格式化 =====
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  // Black 格式化参数（可选）
+  "black-formatter.args": ["--line-length", "88"]
 }
