@@ -31,6 +31,9 @@ def load_project_env() -> None:
             continue
         key, value = line.split("=", maxsplit=1)
         key = key.strip()
+        # 兼容 `export KEY=value` 写法，否则会把 "export KEY" 整体当作变量名。
+        if key.startswith("export "):
+            key = key[len("export "):].strip()
         if key:
             os.environ.setdefault(key, value.strip().strip('"').strip("'"))
 
@@ -58,7 +61,7 @@ def main() -> None:
     results = []
 
     for index, (sentence_a, sentence_b) in enumerate(SENTENCE_PAIRS, start=1):
-        embeddings = model.encode([sentence_a, sentence_b], normalize_embeddings=True) 
+        embeddings = model.encode([sentence_a, sentence_b], normalize_embeddings=True)
         # 已归一化的向量，点积即余弦相似度，范围约为 [-1, 1]。
         score = float(embeddings[0] @ embeddings[1])
         results.append(
